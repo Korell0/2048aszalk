@@ -8,6 +8,7 @@ namespace _2048
 {
     static class Program
     {
+        public static Grid Board = new Grid(5);
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
