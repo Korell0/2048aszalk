@@ -92,55 +92,65 @@ namespace _2048
             // 
             // fel
             // 
+            this.fel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.fel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fel.Location = new System.Drawing.Point(517, 131);
             this.fel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fel.Name = "fel";
             this.fel.Size = new System.Drawing.Size(66, 56);
             this.fel.TabIndex = 25;
             this.fel.Text = "Up";
-            this.fel.UseVisualStyleBackColor = true;
-            this.fel.Click += new System.EventHandler(this.button1_Click);
+            this.fel.UseVisualStyleBackColor = false;
+            
+            this.fel.Click += new System.EventHandler(this.fel_Click);
             // 
             // balra
             // 
+            this.balra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.balra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.balra.Location = new System.Drawing.Point(435, 202);
             this.balra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.balra.Name = "balra";
             this.balra.Size = new System.Drawing.Size(66, 56);
             this.balra.TabIndex = 26;
             this.balra.Text = "Ad sinistram";
-            this.balra.UseVisualStyleBackColor = true;
+            this.balra.UseVisualStyleBackColor = false;
             // 
             // le
             // 
+            this.le.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.le.Cursor = System.Windows.Forms.Cursors.Hand;
             this.le.Location = new System.Drawing.Point(517, 271);
             this.le.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.le.Name = "le";
             this.le.Size = new System.Drawing.Size(66, 56);
             this.le.TabIndex = 27;
             this.le.Text = "Sucus";
-            this.le.UseVisualStyleBackColor = true;
-            this.le.Click += new System.EventHandler(this.button3_Click);
+            this.le.UseVisualStyleBackColor = false;
             // 
             // jobbra
             // 
+            this.jobbra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.jobbra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.jobbra.Location = new System.Drawing.Point(599, 202);
             this.jobbra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.jobbra.Name = "jobbra";
             this.jobbra.Size = new System.Drawing.Size(66, 56);
             this.jobbra.TabIndex = 28;
             this.jobbra.Text = "Ius";
-            this.jobbra.UseVisualStyleBackColor = true;
+            this.jobbra.UseVisualStyleBackColor = false;
             // 
             // wasd
             // 
+            this.wasd.BackColor = System.Drawing.Color.Lime;
+            this.wasd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.wasd.Location = new System.Drawing.Point(506, 192);
             this.wasd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wasd.Name = "wasd";
             this.wasd.Size = new System.Drawing.Size(88, 75);
             this.wasd.TabIndex = 29;
             this.wasd.Text = "WASD";
-            this.wasd.UseVisualStyleBackColor = true;
+            this.wasd.UseVisualStyleBackColor = false;
             // 
             // N11
             // 
@@ -344,12 +354,14 @@ namespace _2048
             // 
             // reset
             // 
+            this.reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.reset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reset.Location = new System.Drawing.Point(433, 343);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(230, 56);
             this.reset.TabIndex = 55;
             this.reset.Text = "ITERUM";
-            this.reset.UseVisualStyleBackColor = true;
+            this.reset.UseVisualStyleBackColor = false;
             // 
             // progressBar
             // 
