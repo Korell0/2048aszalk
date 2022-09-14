@@ -37,7 +37,12 @@ namespace _2048
 
         }
 
-
+        public void Writeout() 
+        {
+        
+        
+        
+        }
 
 
 
