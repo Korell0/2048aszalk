@@ -33,14 +33,23 @@ namespace _2048
             tabla[poz1[0], poz1[1]] = rand.Next(1, 3) * 2;
             tabla[poz2[0], poz2[1]] = rand.Next(1, 3) * 2;
 
-
+            Console.WriteLine(tabla);
 
         }
 
+        public void Display() 
+        {
+            int collum = tabla.GetLength(0);
+            int row = tabla.GetLength(1);
 
-
-
-
-
+          // Tabla beolvasása
+            for (int i = 0; i < row; i++)
+            {
+                for (int j= 0; j < collum; j++)
+                {
+                   
+                }
+            }
+        }
     }
 }
