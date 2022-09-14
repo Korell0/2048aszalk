@@ -7,12 +7,12 @@
     },
     "additionalProbingPaths": [
 <<<<<<< HEAD
-      "C:\\Users\\beretkagellert\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\beretkagellert\\.nuget\\packages"
-=======
       "C:\\Users\\molnarviktor\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\molnarviktor\\.nuget\\packages"
->>>>>>> 4ab9b34f62d96502c05d4fdac1349a953ce18bfe
+=======
+      "C:\\Users\\korsosadam\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\korsosadam\\.nuget\\packages"
+>>>>>>> d93bfc5ce42942bb812c10190db9484c2b32edfa
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

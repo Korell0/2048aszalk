@@ -33,9 +33,13 @@ namespace _2048
             tabla[poz1[0], poz1[1]] = rand.Next(1, 3) * 2;
             tabla[poz2[0], poz2[1]] = rand.Next(1, 3) * 2;
 
+<<<<<<< HEAD
              
 
         }
+=======
+            Console.WriteLine(tabla);
+>>>>>>> 5e7915a901438a4015ca4bdc8bd30ee6cd65f1e5
 
         public void Move(int sor_honnan, int sor_hova, int oszlop_honnan, int oszlop_hova)
         {
@@ -73,12 +77,19 @@ namespace _2048
             
         }
 
+        public void Display() 
+        {
+            int collum = tabla.GetLength(0);
+            int row = tabla.GetLength(1);
 
-
-
-
-
-
-
+          // Tabla beolvasása
+            for (int i = 0; i < row; i++)
+            {
+                for (int j= 0; j < collum; j++)
+                {
+                   
+                }
+            }
+        }
     }
 }

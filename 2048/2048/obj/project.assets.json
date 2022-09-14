@@ -9,21 +9,14 @@
   },
   "packageFolders": {
 <<<<<<< HEAD
-    "C:\\Users\\beretkagellert\\.nuget\\packages\\": {}
-=======
-<<<<<<< HEAD
     "C:\\Users\\molnarviktor\\.nuget\\packages\\": {}
 =======
     "C:\\Users\\korsosadam\\.nuget\\packages\\": {}
->>>>>>> 6f1dadb481337857a222283ea2a29bf947b04990
->>>>>>> 4ab9b34f62d96502c05d4fdac1349a953ce18bfe
+>>>>>>> d93bfc5ce42942bb812c10190db9484c2b32edfa
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\2048.csproj",
-=======
 <<<<<<< HEAD
       "projectUniqueName": "D:\\MV.Github\\2048\\2048\\2048.csproj",
       "projectName": "2048",
@@ -35,19 +28,14 @@
         "C:\\Users\\molnarviktor\\AppData\\Roaming\\NuGet\\NuGet.Config",
 =======
       "projectUniqueName": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj",
->>>>>>> 4ab9b34f62d96502c05d4fdac1349a953ce18bfe
       "projectName": "2048",
-      "projectPath": "D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\2048.csproj",
-      "packagesPath": "C:\\Users\\beretkagellert\\.nuget\\packages\\",
-      "outputPath": "D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\obj\\",
+      "projectPath": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj",
+      "packagesPath": "C:\\Users\\korsosadam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\beretkagellert\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
         "C:\\Users\\korsosadam\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 6f1dadb481337857a222283ea2a29bf947b04990
->>>>>>> 4ab9b34f62d96502c05d4fdac1349a953ce18bfe
+>>>>>>> d93bfc5ce42942bb812c10190db9484c2b32edfa
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -93,5 +81,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+<<<<<<< HEAD
+      "message": "Problem reading the cache file D:\\MV.Github\\2048\\2048\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+=======
+      "message": "Problem reading the cache file C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+>>>>>>> d93bfc5ce42942bb812c10190db9484c2b32edfa
+    }
+  ]
 }
