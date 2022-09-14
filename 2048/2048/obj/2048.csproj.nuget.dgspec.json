@@ -1,45 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\2048.csproj": {}
-=======
-<<<<<<< HEAD
-    "D:\\MV.Github\\2048\\2048\\2048.csproj": {}
-  },
-  "projects": {
-    "D:\\MV.Github\\2048\\2048\\2048.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\MV.Github\\2048\\2048\\2048.csproj",
-        "projectName": "2048",
-        "projectPath": "D:\\MV.Github\\2048\\2048\\2048.csproj",
-        "packagesPath": "C:\\Users\\molnarviktor\\.nuget\\packages\\",
-        "outputPath": "D:\\MV.Github\\2048\\2048\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\molnarviktor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
     "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj": {}
->>>>>>> 4ab9b34f62d96502c05d4fdac1349a953ce18bfe
   },
   "projects": {
-    "D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\2048.csproj": {
+    "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\2048.csproj",
+        "projectUniqueName": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj",
         "projectName": "2048",
-        "projectPath": "D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\2048.csproj",
-        "packagesPath": "C:\\Users\\beretkagellert\\.nuget\\packages\\",
-        "outputPath": "D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\obj\\",
+        "projectPath": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj",
+        "packagesPath": "C:\\Users\\korsosadam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\beretkagellert\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
           "C:\\Users\\korsosadam\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 6f1dadb481337857a222283ea2a29bf947b04990
->>>>>>> 4ab9b34f62d96502c05d4fdac1349a953ce18bfe
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -15,10 +15,14 @@ namespace _2048
         [STAThread]
         static void Main()
         {
+            Board.Display();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+           
+
         }
     }
 }

@@ -99,7 +99,7 @@ namespace _2048
             this.fel.TabIndex = 25;
             this.fel.Text = "Up";
             this.fel.UseVisualStyleBackColor = true;
-            this.fel.Click += new System.EventHandler(this.button1_Click);
+            this.fel.Click += new System.EventHandler(this.fel_kattint);
             // 
             // balra
             // 
@@ -120,7 +120,6 @@ namespace _2048
             this.le.TabIndex = 27;
             this.le.Text = "Sucus";
             this.le.UseVisualStyleBackColor = true;
-            this.le.Click += new System.EventHandler(this.button3_Click);
             // 
             // jobbra
             // 
@@ -144,6 +143,7 @@ namespace _2048
             // 
             // N11
             // 
+            this.N11.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N11.Location = new System.Drawing.Point(20, 12);
             this.N11.Name = "N11";
             this.N11.Size = new System.Drawing.Size(75, 75);
@@ -152,6 +152,7 @@ namespace _2048
             // 
             // N12
             // 
+            this.N12.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N12.Location = new System.Drawing.Point(98, 12);
             this.N12.Name = "N12";
             this.N12.Size = new System.Drawing.Size(75, 75);
@@ -160,6 +161,7 @@ namespace _2048
             // 
             // N13
             // 
+            this.N13.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N13.Location = new System.Drawing.Point(176, 12);
             this.N13.Name = "N13";
             this.N13.Size = new System.Drawing.Size(75, 75);
@@ -168,6 +170,7 @@ namespace _2048
             // 
             // N14
             // 
+            this.N14.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N14.Location = new System.Drawing.Point(254, 12);
             this.N14.Name = "N14";
             this.N14.Size = new System.Drawing.Size(75, 75);
@@ -176,6 +179,7 @@ namespace _2048
             // 
             // N15
             // 
+            this.N15.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N15.Location = new System.Drawing.Point(332, 12);
             this.N15.Name = "N15";
             this.N15.Size = new System.Drawing.Size(75, 75);
@@ -184,6 +188,7 @@ namespace _2048
             // 
             // N25
             // 
+            this.N25.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N25.Location = new System.Drawing.Point(332, 90);
             this.N25.Name = "N25";
             this.N25.Size = new System.Drawing.Size(75, 75);
@@ -192,6 +197,7 @@ namespace _2048
             // 
             // N24
             // 
+            this.N24.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N24.Location = new System.Drawing.Point(254, 90);
             this.N24.Name = "N24";
             this.N24.Size = new System.Drawing.Size(75, 75);
@@ -200,6 +206,7 @@ namespace _2048
             // 
             // N23
             // 
+            this.N23.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N23.Location = new System.Drawing.Point(176, 90);
             this.N23.Name = "N23";
             this.N23.Size = new System.Drawing.Size(75, 75);
@@ -208,6 +215,7 @@ namespace _2048
             // 
             // N22
             // 
+            this.N22.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N22.Location = new System.Drawing.Point(98, 90);
             this.N22.Name = "N22";
             this.N22.Size = new System.Drawing.Size(75, 75);
@@ -216,6 +224,7 @@ namespace _2048
             // 
             // N21
             // 
+            this.N21.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N21.Location = new System.Drawing.Point(20, 90);
             this.N21.Name = "N21";
             this.N21.Size = new System.Drawing.Size(75, 75);
@@ -224,6 +233,7 @@ namespace _2048
             // 
             // N35
             // 
+            this.N35.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N35.Location = new System.Drawing.Point(332, 168);
             this.N35.Name = "N35";
             this.N35.Size = new System.Drawing.Size(75, 75);
@@ -232,6 +242,7 @@ namespace _2048
             // 
             // N34
             // 
+            this.N34.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N34.Location = new System.Drawing.Point(254, 168);
             this.N34.Name = "N34";
             this.N34.Size = new System.Drawing.Size(75, 75);
@@ -240,6 +251,7 @@ namespace _2048
             // 
             // N33
             // 
+            this.N33.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N33.Location = new System.Drawing.Point(176, 168);
             this.N33.Name = "N33";
             this.N33.Size = new System.Drawing.Size(75, 75);
@@ -248,6 +260,7 @@ namespace _2048
             // 
             // N32
             // 
+            this.N32.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N32.Location = new System.Drawing.Point(98, 168);
             this.N32.Name = "N32";
             this.N32.Size = new System.Drawing.Size(75, 75);
@@ -256,6 +269,7 @@ namespace _2048
             // 
             // N31
             // 
+            this.N31.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N31.Location = new System.Drawing.Point(20, 168);
             this.N31.Name = "N31";
             this.N31.Size = new System.Drawing.Size(75, 75);
@@ -264,6 +278,7 @@ namespace _2048
             // 
             // N45
             // 
+            this.N45.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N45.Location = new System.Drawing.Point(332, 246);
             this.N45.Name = "N45";
             this.N45.Size = new System.Drawing.Size(75, 75);
@@ -272,6 +287,7 @@ namespace _2048
             // 
             // N44
             // 
+            this.N44.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N44.Location = new System.Drawing.Point(254, 246);
             this.N44.Name = "N44";
             this.N44.Size = new System.Drawing.Size(75, 75);
@@ -280,6 +296,7 @@ namespace _2048
             // 
             // N43
             // 
+            this.N43.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N43.Location = new System.Drawing.Point(176, 246);
             this.N43.Name = "N43";
             this.N43.Size = new System.Drawing.Size(75, 75);
@@ -288,6 +305,7 @@ namespace _2048
             // 
             // N42
             // 
+            this.N42.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N42.Location = new System.Drawing.Point(98, 246);
             this.N42.Name = "N42";
             this.N42.Size = new System.Drawing.Size(75, 75);
@@ -296,6 +314,7 @@ namespace _2048
             // 
             // N41
             // 
+            this.N41.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N41.Location = new System.Drawing.Point(20, 246);
             this.N41.Name = "N41";
             this.N41.Size = new System.Drawing.Size(75, 75);
@@ -304,6 +323,7 @@ namespace _2048
             // 
             // N55
             // 
+            this.N55.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N55.Location = new System.Drawing.Point(332, 324);
             this.N55.Name = "N55";
             this.N55.Size = new System.Drawing.Size(75, 75);
@@ -312,6 +332,7 @@ namespace _2048
             // 
             // N54
             // 
+            this.N54.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N54.Location = new System.Drawing.Point(254, 324);
             this.N54.Name = "N54";
             this.N54.Size = new System.Drawing.Size(75, 75);
@@ -320,6 +341,7 @@ namespace _2048
             // 
             // N53
             // 
+            this.N53.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N53.Location = new System.Drawing.Point(176, 324);
             this.N53.Name = "N53";
             this.N53.Size = new System.Drawing.Size(75, 75);
@@ -328,6 +350,7 @@ namespace _2048
             // 
             // N52
             // 
+            this.N52.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N52.Location = new System.Drawing.Point(98, 324);
             this.N52.Name = "N52";
             this.N52.Size = new System.Drawing.Size(75, 75);
@@ -336,6 +359,7 @@ namespace _2048
             // 
             // N51
             // 
+            this.N51.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.N51.Location = new System.Drawing.Point(20, 324);
             this.N51.Name = "N51";
             this.N51.Size = new System.Drawing.Size(75, 75);
