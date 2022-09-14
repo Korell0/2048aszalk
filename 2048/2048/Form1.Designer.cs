@@ -29,11 +29,11 @@ namespace _2048
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.fel = new System.Windows.Forms.Button();
+            this.balra = new System.Windows.Forms.Button();
+            this.le = new System.Windows.Forms.Button();
+            this.jobbra = new System.Windows.Forms.Button();
+            this.wasd = new System.Windows.Forms.Button();
             this.N11 = new System.Windows.Forms.PictureBox();
             this.N12 = new System.Windows.Forms.PictureBox();
             this.N13 = new System.Windows.Forms.PictureBox();
@@ -59,6 +59,10 @@ namespace _2048
             this.N53 = new System.Windows.Forms.PictureBox();
             this.N52 = new System.Windows.Forms.PictureBox();
             this.N51 = new System.Windows.Forms.PictureBox();
+            this.reset = new System.Windows.Forms.Button();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pont = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.N11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.N12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.N13)).BeginInit();
@@ -86,56 +90,57 @@ namespace _2048
             ((System.ComponentModel.ISupportInitialize)(this.N51)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // fel
             // 
-            this.button1.Location = new System.Drawing.Point(515, 107);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 56);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Fel";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.fel.Location = new System.Drawing.Point(517, 131);
+            this.fel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fel.Name = "fel";
+            this.fel.Size = new System.Drawing.Size(66, 56);
+            this.fel.TabIndex = 25;
+            this.fel.Text = "Up";
+            this.fel.UseVisualStyleBackColor = true;
+            this.fel.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // balra
             // 
-            this.button2.Location = new System.Drawing.Point(433, 178);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 56);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Balra";
-            this.button2.UseVisualStyleBackColor = true;
+            this.balra.Location = new System.Drawing.Point(435, 202);
+            this.balra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.balra.Name = "balra";
+            this.balra.Size = new System.Drawing.Size(66, 56);
+            this.balra.TabIndex = 26;
+            this.balra.Text = "Ad sinistram";
+            this.balra.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // le
             // 
-            this.button3.Location = new System.Drawing.Point(515, 247);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(66, 56);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Le";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.le.Location = new System.Drawing.Point(517, 271);
+            this.le.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.le.Name = "le";
+            this.le.Size = new System.Drawing.Size(66, 56);
+            this.le.TabIndex = 27;
+            this.le.Text = "Sucus";
+            this.le.UseVisualStyleBackColor = true;
+            this.le.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // jobbra
             // 
-            this.button4.Location = new System.Drawing.Point(597, 178);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(66, 56);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Jobbra";
-            this.button4.UseVisualStyleBackColor = true;
+            this.jobbra.Location = new System.Drawing.Point(599, 202);
+            this.jobbra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.jobbra.Name = "jobbra";
+            this.jobbra.Size = new System.Drawing.Size(66, 56);
+            this.jobbra.TabIndex = 28;
+            this.jobbra.Text = "Ius";
+            this.jobbra.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // wasd
             // 
-            this.button5.Location = new System.Drawing.Point(504, 168);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 75);
-            this.button5.TabIndex = 29;
-            this.button5.UseVisualStyleBackColor = true;
+            this.wasd.Location = new System.Drawing.Point(506, 192);
+            this.wasd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.wasd.Name = "wasd";
+            this.wasd.Size = new System.Drawing.Size(88, 75);
+            this.wasd.TabIndex = 29;
+            this.wasd.Text = "WASD";
+            this.wasd.UseVisualStyleBackColor = true;
             // 
             // N11
             // 
@@ -337,11 +342,51 @@ namespace _2048
             this.N51.TabIndex = 50;
             this.N51.TabStop = false;
             // 
+            // reset
+            // 
+            this.reset.Location = new System.Drawing.Point(433, 343);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(230, 56);
+            this.reset.TabIndex = 55;
+            this.reset.Text = "ITERUM";
+            this.reset.UseVisualStyleBackColor = true;
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(433, 53);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(230, 23);
+            this.progressBar.TabIndex = 56;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(480, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 37);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Progressus";
+            // 
+            // pont
+            // 
+            this.pont.AutoSize = true;
+            this.pont.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.pont.Location = new System.Drawing.Point(533, 85);
+            this.pont.Name = "pont";
+            this.pont.Size = new System.Drawing.Size(32, 37);
+            this.pont.TabIndex = 58;
+            this.pont.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 420);
+            this.Controls.Add(this.pont);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.reset);
             this.Controls.Add(this.N55);
             this.Controls.Add(this.N54);
             this.Controls.Add(this.N53);
@@ -367,11 +412,11 @@ namespace _2048
             this.Controls.Add(this.N13);
             this.Controls.Add(this.N12);
             this.Controls.Add(this.N11);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.wasd);
+            this.Controls.Add(this.jobbra);
+            this.Controls.Add(this.le);
+            this.Controls.Add(this.balra);
+            this.Controls.Add(this.fel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "2048";
@@ -401,15 +446,16 @@ namespace _2048
             ((System.ComponentModel.ISupportInitialize)(this.N52)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.N51)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button fel;
+        private System.Windows.Forms.Button balra;
+        private System.Windows.Forms.Button le;
+        private System.Windows.Forms.Button jobbra;
+        private System.Windows.Forms.Button wasd;
         private System.Windows.Forms.PictureBox N11;
         private System.Windows.Forms.PictureBox N12;
         private System.Windows.Forms.PictureBox N13;
@@ -435,6 +481,10 @@ namespace _2048
         private System.Windows.Forms.PictureBox N53;
         private System.Windows.Forms.PictureBox N52;
         private System.Windows.Forms.PictureBox N51;
+        private System.Windows.Forms.Button reset;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label pont;
     }
 }
 
