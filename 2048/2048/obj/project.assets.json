@@ -8,11 +8,16 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\molnarviktor\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\korsosadam\\.nuget\\packages\\": {}
+>>>>>>> 6f1dadb481337857a222283ea2a29bf947b04990
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\MV.Github\\2048\\2048\\2048.csproj",
       "projectName": "2048",
       "projectPath": "D:\\MV.Github\\2048\\2048\\2048.csproj",
@@ -21,6 +26,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\molnarviktor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj",
+      "projectName": "2048",
+      "projectPath": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj",
+      "packagesPath": "C:\\Users\\korsosadam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\korsosadam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 6f1dadb481337857a222283ea2a29bf947b04990
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

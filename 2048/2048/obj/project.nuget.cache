@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "wnsKvUpUtIWGU50PKvfYF3C4z+7XHPl9uZymTVFtwwGZ0QEqHD/bT2b0jkfBerwoxKfG+cDj3EY04GDKLhTw7Q==",
   "success": true,
   "projectFilePath": "D:\\MV.Github\\2048\\2048\\2048.csproj",
+=======
+  "dgSpecHash": "Yl9r5TCACz3r1avPIXKf3APmsFx8X+9TlFFT8D4qYvzj8hVf3S42dKgbHuldtmQVgPl0VbTylImYODn53baf8Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj",
+>>>>>>> 6f1dadb481337857a222283ea2a29bf947b04990
   "expectedPackageFiles": [],
   "logs": []
 }
