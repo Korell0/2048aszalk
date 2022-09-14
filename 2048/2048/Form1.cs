@@ -12,6 +12,7 @@ namespace _2048
 {
     public partial class Form1 : Form
     {
+        static Grid Board = new Grid(5);
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +26,11 @@ namespace _2048
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void balra_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -110,6 +110,7 @@ namespace _2048
             this.balra.TabIndex = 26;
             this.balra.Text = "Ad sinistram";
             this.balra.UseVisualStyleBackColor = true;
+            this.balra.Click += new System.EventHandler(this.balra_Click);
             // 
             // le
             // 

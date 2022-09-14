@@ -33,8 +33,44 @@ namespace _2048
             tabla[poz1[0], poz1[1]] = rand.Next(1, 3) * 2;
             tabla[poz2[0], poz2[1]] = rand.Next(1, 3) * 2;
 
+             
 
+        }
 
+        public void Move(int sor_honnan, int sor_hova, int oszlop_honnan, int oszlop_hova)
+        {
+            //balra gomb összadaás kizárólag (hiányzik az áthelyezés)
+            for (int sor = 0; sor < 6; sor++)
+            {
+                for (int oszlop = 0; oszlop < 6; oszlop++)
+                {
+                    for (int i = 0; i < 6; i++)
+                    {
+                        if (tabla[sor, oszlop] == tabla[sor, i])
+                        {
+                            tabla[sor, oszlop] *= 2;
+                            tabla[sor, i] = 0;
+                        }
+                    }
+                }
+            }
+
+            //jobbra gomb összeadás kizárólag (hiányzik az áthelyezés)
+            for (int sor = 0; sor < 6; sor++)
+            {
+                for (int oszlop = 5; oszlop < -1; oszlop--)
+                {
+                    for (int i = 5; i < -1; i--)
+                    {
+                        if (tabla[sor, oszlop] == tabla[sor, i])
+                        {
+                            tabla[sor, oszlop] *= 2;
+                            tabla[sor, i] = 0;
+                        }
+                    }
+                }
+            }
+            
         }
 
 
