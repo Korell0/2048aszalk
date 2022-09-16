@@ -17,17 +17,43 @@ namespace _2048
         public Form1()
         {
             InitializeComponent();
+            Palyageneralas(5);
         }
 
-<<<<<<< HEAD
+        private void Palyageneralas(int meret)
+        {
+            int[,] GameSpace = new int[meret, meret];
+            int sor = 0;
+            int oszlop = 0;
+
+            for (int i = 0; i < meret*meret; i++)
+            {
+                oszlop = i % meret;
+                
+                PictureBox uj = new PictureBox();
+                uj.Name = i.ToString();
+
+                uj.Location = new Point(20 + oszlop*78 +3, 20 + sor*78);
+                uj.Size = new Size(75, 75);
+                uj.BackColor = Color.FromArgb(0,0,0);
+                if (oszlop == meret - 1)
+                {
+                    sor++;
+                }
+                this.Controls.Add(uj);
+                for (int j = 0; j < sor; j++)
+                {
+                    for (int k = 0; k < oszlop; k++)
+                    {
+
+                    }
+                }
+            }
+        }
+
         private void fel_Click(object sender, EventArgs e)
         {
-
-=======
-        private void fel_kattint(object sender, EventArgs e)
-        {
             
->>>>>>> d93bfc5ce42942bb812c10190db9484c2b32edfa
         }
 
         private void balra_Click(object sender, EventArgs e)
