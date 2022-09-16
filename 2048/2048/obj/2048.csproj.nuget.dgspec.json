@@ -1,22 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "D:\\MV.Github\\2048\\2048\\2048.csproj": {}
-  },
-  "projects": {
-    "D:\\MV.Github\\2048\\2048\\2048.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\MV.Github\\2048\\2048\\2048.csproj",
-        "projectName": "2048",
-        "projectPath": "D:\\MV.Github\\2048\\2048\\2048.csproj",
-        "packagesPath": "C:\\Users\\molnarviktor\\.nuget\\packages\\",
-        "outputPath": "D:\\MV.Github\\2048\\2048\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\molnarviktor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
     "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj": {}
   },
   "projects": {
@@ -31,7 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\korsosadam\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> d93bfc5ce42942bb812c10190db9484c2b32edfa
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

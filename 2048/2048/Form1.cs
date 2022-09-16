@@ -17,22 +17,26 @@ namespace _2048
         public Form1()
         {
             InitializeComponent();
+            TablaKiiratas();
         }
 
-<<<<<<< HEAD
+        private void TablaKiiratas()
+        {
+            for (int i = 1; i <5; i++)
+            {
+                for (int j = 1; j < 5; j++)
+                {
+                    string name = $"N{i}{j}";
+                    this.N11.Image = Image.FromFile($"{Board.Display(i,j)}.png");
+                }
+            }
+        }
+
         private void fel_Click(object sender, EventArgs e)
         {
+        
 
-=======
-        private void fel_kattint(object sender, EventArgs e)
-        {
-            
->>>>>>> d93bfc5ce42942bb812c10190db9484c2b32edfa
-        }
 
-        private void balra_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
