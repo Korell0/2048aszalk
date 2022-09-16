@@ -35,9 +35,13 @@ namespace _2048
 
              
 
+<<<<<<< HEAD
             Console.WriteLine(tabla);
         }
 
+=======
+        }
+>>>>>>> 325b366e33a902c4d9ff0b4e0583165f140aa3e3
 
         public void Move(int sor_honnan, int sor_hova, int oszlop_honnan, int oszlop_hova)
         {
@@ -75,19 +79,28 @@ namespace _2048
             
         }
 
-        public void Display() 
+        public int Display(int sor,int oszlop) 
         {
             int collum = tabla.GetLength(0);
             int row = tabla.GetLength(1);
+
 
           // Tabla beolvasása
             for (int i = 0; i < row; i++)
             {
                 for (int j= 0; j < collum; j++)
                 {
-                   
+                    if (i == sor )
+                    {
+                        if (j==oszlop)
+                        {
+                            return tabla[i, j];
+                        }
+
+                    }
                 }
             }
+            return 0;
         }
     }
 }

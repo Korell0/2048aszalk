@@ -14,6 +14,10 @@ namespace _2048
         [STAThread]
         static void Main()
         {
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 325b366e33a902c4d9ff0b4e0583165f140aa3e3
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

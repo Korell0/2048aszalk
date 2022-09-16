@@ -17,6 +17,7 @@ namespace _2048
         public Form1()
         {
             InitializeComponent();
+<<<<<<< HEAD
             Palyageneralas(5);
         }
 
@@ -54,11 +55,28 @@ namespace _2048
         private void fel_Click(object sender, EventArgs e)
         {
             
+=======
+            TablaKiiratas();
         }
 
-        private void balra_Click(object sender, EventArgs e)
+        private void TablaKiiratas()
         {
-            
+            for (int i = 1; i <5; i++)
+            {
+                for (int j = 1; j < 5; j++)
+                {
+                    string name = $"N{i}{j}";
+                    this.N11.Image = Image.FromFile($"{Board.Display(i,j)}.png");
+                }
+            }
+>>>>>>> 325b366e33a902c4d9ff0b4e0583165f140aa3e3
+        }
+
+        private void fel_Click(object sender, EventArgs e)
+        {
+        
+
+
         }
     }
 }
