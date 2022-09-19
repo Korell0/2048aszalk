@@ -35,13 +35,8 @@ namespace _2048
 
              
 
-<<<<<<< HEAD
             Console.WriteLine(tabla);
         }
-
-=======
-        }
->>>>>>> 325b366e33a902c4d9ff0b4e0583165f140aa3e3
 
         public void Move(int sor_honnan, int sor_hova, int oszlop_honnan, int oszlop_hova)
         {

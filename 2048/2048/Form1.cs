@@ -14,16 +14,17 @@ namespace _2048
     public partial class Form1 : Form
     {
         static Grid Board = new Grid(5);
+        static PictureBox[,] pictrures;
+
         public Form1()
         {
             InitializeComponent();
-<<<<<<< HEAD
             Palyageneralas(5);
         }
 
         private void Palyageneralas(int meret)
         {
-            int[,] GameSpace = new int[meret, meret];
+            pictrures = new PictureBox[meret, meret];
             int sor = 0;
             int oszlop = 0;
 
@@ -42,20 +43,17 @@ namespace _2048
                     sor++;
                 }
                 this.Controls.Add(uj);
-                for (int j = 0; j < sor; j++)
-                {
-                    for (int k = 0; k < oszlop; k++)
-                    {
+                pictrures[sor, oszlop] = uj;
 
-                    }
-                }
+
             }
+
         }
+
 
         private void fel_Click(object sender, EventArgs e)
         {
             
-=======
             TablaKiiratas();
         }
 
@@ -69,14 +67,6 @@ namespace _2048
                     this.N11.Image = Image.FromFile($"{Board.Display(i,j)}.png");
                 }
             }
->>>>>>> 325b366e33a902c4d9ff0b4e0583165f140aa3e3
-        }
-
-        private void fel_Click(object sender, EventArgs e)
-        {
-        
-
-
         }
     }
 }
