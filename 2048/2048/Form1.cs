@@ -17,6 +17,43 @@ namespace _2048
         public Form1()
         {
             InitializeComponent();
+            Palyageneralas(5);
+        }
+
+        private void Palyageneralas(int meret)
+        {
+            int[,] GameSpace = new int[meret, meret];
+            int sor = 0;
+            int oszlop = 0;
+
+            for (int i = 0; i < meret*meret; i++)
+            {
+                oszlop = i % meret;
+                
+                PictureBox uj = new PictureBox();
+                uj.Name = i.ToString();
+
+                uj.Location = new Point(20 + oszlop*78 +3, 20 + sor*78);
+                uj.Size = new Size(75, 75);
+                uj.BackColor = Color.FromArgb(0,0,0);
+                if (oszlop == meret - 1)
+                {
+                    sor++;
+                }
+                this.Controls.Add(uj);
+                for (int j = 0; j < sor; j++)
+                {
+                    for (int k = 0; k < oszlop; k++)
+                    {
+
+                    }
+                }
+            }
+        }
+
+        private void fel_Click(object sender, EventArgs e)
+        {
+            
             TablaKiiratas();
         }
 
@@ -27,16 +64,10 @@ namespace _2048
                 for (int j = 1; j < 5; j++)
                 {
                     string name = $"N{i}{j}";
-                    this.N11.Image = Image.FromFile($"{Board.Display(i,j)}.png");
+                    //this..Image = Image.FromFile($"{Board.Display(i,j)}.png");
                 }
             }
         }
 
-        private void fel_Click(object sender, EventArgs e)
-        {
-        
-
-
-        }
     }
 }
