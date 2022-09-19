@@ -38,6 +38,7 @@ namespace _2048
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.pont = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // fel
@@ -52,13 +53,6 @@ namespace _2048
             this.fel.Text = "Up";
             this.fel.UseVisualStyleBackColor = true;
             this.fel.Click += new System.EventHandler(this.fel_Click);
-
-            this.fel.UseVisualStyleBackColor = false;
-            
-            this.fel.Click += new System.EventHandler(this.fel_Click);
-
-            this.fel.UseVisualStyleBackColor = true;
-
             // 
             // balra
             // 
@@ -71,8 +65,6 @@ namespace _2048
             this.balra.TabIndex = 26;
             this.balra.Text = "Ad sinistram";
             this.balra.UseVisualStyleBackColor = false;
-            this.balra.UseVisualStyleBackColor = true;
-            this.balra.UseVisualStyleBackColor = false;
             // 
             // le
             // 
@@ -84,7 +76,6 @@ namespace _2048
             this.le.Size = new System.Drawing.Size(66, 56);
             this.le.TabIndex = 27;
             this.le.Text = "Sucus";
-            this.le.UseVisualStyleBackColor = false;
             this.le.UseVisualStyleBackColor = true;
             // 
             // jobbra
@@ -149,11 +140,22 @@ namespace _2048
             this.pont.TabIndex = 58;
             this.pont.Text = "0";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(140, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 21);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Méret választás";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 420);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pont);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar);
@@ -181,6 +183,7 @@ namespace _2048
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label pont;
+        private System.Windows.Forms.Label label2;
     }
 }
 

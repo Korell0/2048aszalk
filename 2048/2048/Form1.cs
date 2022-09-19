@@ -34,16 +34,17 @@ namespace _2048
                 
                 PictureBox uj = new PictureBox();
                 uj.Name = i.ToString();
+                this.Controls.Add(uj);
 
                 uj.Location = new Point(20 + oszlop*78 +3, 20 + sor*78);
                 uj.Size = new Size(75, 75);
                 uj.BackColor = Color.FromArgb(0,0,0);
+                uj.BackgroundImageLayout = ImageLayout.Center;
+                pictrures[sor, oszlop] = uj;
                 if (oszlop == meret - 1)
                 {
                     sor++;
                 }
-                this.Controls.Add(uj);
-                pictrures[sor, oszlop] = uj;
 
 
             }
@@ -64,7 +65,6 @@ namespace _2048
                 for (int j = 1; j < 5; j++)
                 {
                     string name = $"N{i}{j}";
-                    this.N11.Image = Image.FromFile($"{Board.Display(i,j)}.png");
                 }
             }
         }
