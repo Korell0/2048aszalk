@@ -38,8 +38,6 @@ namespace _2048
             Console.WriteLine(tabla);
         }
         
-
-
         public void Move(int sor_honnan, int sor_hova, int oszlop_honnan, int oszlop_hova)
         {
             //balra gomb összadaás kizárólag (hiányzik az áthelyezés)
