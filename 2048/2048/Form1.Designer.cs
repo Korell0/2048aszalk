@@ -36,8 +36,11 @@ namespace _2048
             this.wasd = new System.Windows.Forms.Button();
             this.reset = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Progressus = new System.Windows.Forms.Label();
             this.pont = new System.Windows.Forms.Label();
+            this.size = new System.Windows.Forms.Label();
+            this.X4 = new System.Windows.Forms.Button();
+            this.X5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fel
@@ -51,14 +54,8 @@ namespace _2048
             this.fel.TabIndex = 25;
             this.fel.Text = "Up";
             this.fel.UseVisualStyleBackColor = true;
+            this.fel.Visible = false;
             this.fel.Click += new System.EventHandler(this.fel_Click);
-
-            this.fel.UseVisualStyleBackColor = false;
-            
-            this.fel.Click += new System.EventHandler(this.fel_Click);
-
-            this.fel.UseVisualStyleBackColor = true;
-
             // 
             // balra
             // 
@@ -71,8 +68,7 @@ namespace _2048
             this.balra.TabIndex = 26;
             this.balra.Text = "Ad sinistram";
             this.balra.UseVisualStyleBackColor = false;
-            this.balra.UseVisualStyleBackColor = true;
-            this.balra.UseVisualStyleBackColor = false;
+            this.balra.Visible = false;
             // 
             // le
             // 
@@ -84,8 +80,8 @@ namespace _2048
             this.le.Size = new System.Drawing.Size(66, 56);
             this.le.TabIndex = 27;
             this.le.Text = "Sucus";
-            this.le.UseVisualStyleBackColor = false;
             this.le.UseVisualStyleBackColor = true;
+            this.le.Visible = false;
             // 
             // jobbra
             // 
@@ -98,6 +94,7 @@ namespace _2048
             this.jobbra.TabIndex = 28;
             this.jobbra.Text = "Ius";
             this.jobbra.UseVisualStyleBackColor = false;
+            this.jobbra.Visible = false;
             // 
             // wasd
             // 
@@ -110,6 +107,7 @@ namespace _2048
             this.wasd.TabIndex = 29;
             this.wasd.Text = "WASD";
             this.wasd.UseVisualStyleBackColor = false;
+            this.wasd.Visible = false;
             // 
             // reset
             // 
@@ -121,6 +119,7 @@ namespace _2048
             this.reset.TabIndex = 55;
             this.reset.Text = "ITERUM";
             this.reset.UseVisualStyleBackColor = false;
+            this.reset.Visible = false;
             // 
             // progressBar
             // 
@@ -128,16 +127,18 @@ namespace _2048
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(230, 23);
             this.progressBar.TabIndex = 56;
+            this.progressBar.Visible = false;
             // 
-            // label1
+            // Progressus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(480, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 37);
-            this.label1.TabIndex = 57;
-            this.label1.Text = "Progressus";
+            this.Progressus.AutoSize = true;
+            this.Progressus.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Progressus.Location = new System.Drawing.Point(480, 13);
+            this.Progressus.Name = "Progressus";
+            this.Progressus.Size = new System.Drawing.Size(144, 37);
+            this.Progressus.TabIndex = 57;
+            this.Progressus.Text = "Progressus";
+            this.Progressus.Visible = false;
             // 
             // pont
             // 
@@ -148,14 +149,48 @@ namespace _2048
             this.pont.Size = new System.Drawing.Size(32, 37);
             this.pont.TabIndex = 58;
             this.pont.Text = "0";
+            this.pont.Visible = false;
+            // 
+            // size
+            // 
+            this.size.AutoSize = true;
+            this.size.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.size.Location = new System.Drawing.Point(283, 26);
+            this.size.Name = "size";
+            this.size.Size = new System.Drawing.Size(117, 21);
+            this.size.TabIndex = 59;
+            this.size.Text = "Méret választás";
+            // 
+            // X4
+            // 
+            this.X4.Location = new System.Drawing.Point(283, 131);
+            this.X4.Name = "X4";
+            this.X4.Size = new System.Drawing.Size(117, 33);
+            this.X4.TabIndex = 60;
+            this.X4.Text = "4X4";
+            this.X4.UseVisualStyleBackColor = true;
+            this.X4.Click += new System.EventHandler(this.X4_Click);
+            // 
+            // X5
+            // 
+            this.X5.Location = new System.Drawing.Point(283, 71);
+            this.X5.Name = "X5";
+            this.X5.Size = new System.Drawing.Size(117, 33);
+            this.X5.TabIndex = 61;
+            this.X5.Text = "5X5";
+            this.X5.UseVisualStyleBackColor = true;
+            this.X5.Click += new System.EventHandler(this.X5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 420);
+            this.Controls.Add(this.X5);
+            this.Controls.Add(this.X4);
+            this.Controls.Add(this.size);
             this.Controls.Add(this.pont);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Progressus);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.reset);
             this.Controls.Add(this.wasd);
@@ -179,8 +214,11 @@ namespace _2048
         private System.Windows.Forms.Button wasd;
         private System.Windows.Forms.Button reset;
         private System.Windows.Forms.ProgressBar progressBar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Progressus;
         private System.Windows.Forms.Label pont;
+        private System.Windows.Forms.Label size;
+        private System.Windows.Forms.Button X4;
+        private System.Windows.Forms.Button X5;
     }
 }
 
