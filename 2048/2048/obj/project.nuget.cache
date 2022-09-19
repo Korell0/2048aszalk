@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "wnsKvUpUtIWGU50PKvfYF3C4z+7XHPl9uZymTVFtwwGZ0QEqHD/bT2b0jkfBerwoxKfG+cDj3EY04GDKLhTw7Q==",
+  "dgSpecHash": "Yl9r5TCACz3r1avPIXKf3APmsFx8X+9TlFFT8D4qYvzj8hVf3S42dKgbHuldtmQVgPl0VbTylImYODn53baf8Q==",
   "success": true,
-  "projectFilePath": "D:\\MV.Github\\2048\\2048\\2048.csproj",
+  "projectFilePath": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj",
   "expectedPackageFiles": [],
   "logs": [
     {
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\MV.Github\\2048\\2048\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }
