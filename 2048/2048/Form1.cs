@@ -62,7 +62,9 @@ namespace _2048
             {
                 for (int j = 0; j < 5; j++)
                 {
+                    pictrures[i, j].Image = null;
                     pictrures[i,j].Image = Image.FromFile($"{Board.Display(i,j)}.png");
+                    
                 }
             }
         }
