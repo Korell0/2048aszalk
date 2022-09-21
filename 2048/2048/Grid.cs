@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace _2048
 {
@@ -17,11 +18,7 @@ namespace _2048
             pontszam = 0;
             TablaFeltoltes();
             SzamGeneralas(new Random());
-
-
-            tabla[tabla.GetLength(0) - 2, tabla.GetLength(1) - 1] = 1024;
-            tabla[tabla.GetLength(0) - 2, tabla.GetLength(1) - 2] = 1024;
-
+            SzamGeneralas(new Random());
 
         }
 
@@ -74,7 +71,9 @@ namespace _2048
                     }
                 }
             }
-            return true;
+            MessageBox.Show($"Játék Vége!\nElért pontszámod: {pontszam}");
+            Application.Restart();
+            return true; // Ez itt egy picit érdekes 🤔
         }
 
         public void EllenorzesPont(int sor, int oszlop)
