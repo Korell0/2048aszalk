@@ -9,11 +9,13 @@ namespace _2048
     class Grid
     {
         public int[,] tabla;
+        public bool teljes;
 
         public Grid(int meret)
         {
 
             tabla = new int[meret, meret];
+            teljes = false;
             TablaFeltoltes();
             SzamGeneralas(new Random());
             SzamGeneralas(new Random());
@@ -23,6 +25,16 @@ namespace _2048
         public void SzamGeneralas(Random rand)
         {
             int[] poz = new int[] { rand.Next(0, tabla.GetLength(0)), rand.Next(0, tabla.GetLength(1)) };
+            for (int sor = 0; sor < tabla.GetLength(1); sor++)
+			{
+                for (int oszlop = 0; oszlop < tabla.GetLength(0); oszlop++)
+			    {
+                    if ()
+	                {
+
+	                }
+			    }
+			}
             if (tabla[poz[0], poz[1]] == 0)
             {
                 tabla[poz[0], poz[1]] = rand.Next(1, 3) * 2;
