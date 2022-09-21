@@ -51,7 +51,7 @@ namespace _2048
         {
             TablaKiiratas();
             pont.Text = $"{Board.pontszam}";
-            progressBar.Value = Convert.ToInt32(Math.Log2(Board.MaxPont() / 2) * 10);
+            progressBar.Value = Convert.ToInt32(Math.Log2(Board.MaxPont()) * (Math.Log2(2048/10)));
             Board.Del2048();
         }
 
@@ -124,8 +124,7 @@ namespace _2048
             {
                 for (int oszlop = 0; oszlop < Board.tabla.GetLength(0); oszlop++)
                 {
-                    pictures[sor, oszlop].Image = null;
-                    pictures[sor, oszlop].Image = Image.FromFile($"{Board.Display(sor, oszlop)}.png");
+                    pictures[sor, oszlop].Image = Image.FromFile($"{Board.tabla[sor, oszlop]}.png");
                 }
             }
         }

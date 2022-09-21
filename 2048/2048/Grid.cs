@@ -222,29 +222,5 @@ namespace _2048
                 }
             }
         }
-
-        public int Display(int sor,int oszlop) 
-        {
-            int collum = tabla.GetLength(0);
-            int row = tabla.GetLength(1);
-
-
-          // Tabla beolvasása
-            for (int i = 0; i < row; i++)
-            {
-                for (int j= 0; j < collum; j++)
-                {
-                    if (i == sor )
-                    {
-                        if (j==oszlop)
-                        {
-                            return tabla[i, j];
-                        }
-
-                    }
-                }
-            }
-            return 0;
-        }
     }
 }
