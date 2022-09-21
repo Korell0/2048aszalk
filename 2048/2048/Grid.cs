@@ -34,10 +34,18 @@ namespace _2048
             tabla[poz2[0], poz2[1]] = rand.Next(1, 3) * 2;
 
              
+<<<<<<< HEAD
             Console.WriteLine(tabla);
         }
 
         public void MoveHorizontal(int honnan, int hova)
+=======
+
+            Console.WriteLine(tabla);
+        }
+        
+        public void Move(int sor_honnan, int sor_hova, int oszlop_honnan, int oszlop_hova)
+>>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
         {
             //balra és jobbra gomb, összadaás kizárólag (hiányzik az áthelyezés)
             int leptek = new int[] { honnan, hova }.Max() == hova ? 1 : -1;
@@ -89,22 +97,35 @@ namespace _2048
             }
         }
 
+<<<<<<< HEAD
 
 
 
         public void Display() 
+=======
+        public int Display(int sor,int oszlop) 
+>>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
         {
             int collum = tabla.GetLength(0);
             int row = tabla.GetLength(1);
+
 
           // Tabla beolvasása
             for (int i = 0; i < row; i++)
             {
                 for (int j= 0; j < collum; j++)
                 {
-                   
+                    if (i == sor )
+                    {
+                        if (j==oszlop)
+                        {
+                            return tabla[i, j];
+                        }
+
+                    }
                 }
             }
+            return 0;
         }
     }
 }

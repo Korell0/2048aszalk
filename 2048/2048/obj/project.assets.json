@@ -8,11 +8,16 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\beretkagellert\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\korsosadam\\.nuget\\packages\\": {}
+>>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\2048.csproj",
       "projectName": "2048",
       "projectPath": "D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\2048.csproj",
@@ -21,6 +26,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\beretkagellert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj",
+      "projectName": "2048",
+      "projectPath": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj",
+      "packagesPath": "C:\\Users\\korsosadam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\korsosadam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -66,6 +81,7 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
+<<<<<<< HEAD
   },
   "logs": [
     {
@@ -75,4 +91,7 @@
       "message": "Problem reading the cache file D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
+=======
+  }
+>>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
 }

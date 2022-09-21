@@ -6,8 +6,13 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\beretkagellert\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\beretkagellert\\.nuget\\packages"
+=======
+      "C:\\Users\\korsosadam\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\korsosadam\\.nuget\\packages"
+>>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

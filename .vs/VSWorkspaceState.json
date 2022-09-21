@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< HEAD
     "\\2048",
     "\\2048\\2048",
     "\\2048_tiles"
+=======
+    "\\2048"
+>>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
   ],
   "SelectedNode": "\\2048\\2048.sln",
   "PreviewInSolutionExplorer": false
