@@ -53,12 +53,9 @@ namespace _2048
             this.fel.Size = new System.Drawing.Size(66, 56);
             this.fel.TabIndex = 25;
             this.fel.Text = "Up";
-<<<<<<< HEAD
             this.fel.UseVisualStyleBackColor = false;
-=======
             this.fel.UseVisualStyleBackColor = true;
             this.fel.Visible = false;
->>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
             this.fel.Click += new System.EventHandler(this.fel_Click);
             // 
             // balra
@@ -71,13 +68,10 @@ namespace _2048
             this.balra.Size = new System.Drawing.Size(66, 56);
             this.balra.TabIndex = 26;
             this.balra.Text = "Ad sinistram";
-<<<<<<< HEAD
             this.balra.UseVisualStyleBackColor = true;
             this.balra.Click += new System.EventHandler(this.balra_Click);
-=======
             this.balra.UseVisualStyleBackColor = false;
             this.balra.Visible = false;
->>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
             // 
             // le
             // 
@@ -89,13 +83,11 @@ namespace _2048
             this.le.Size = new System.Drawing.Size(66, 56);
             this.le.TabIndex = 27;
             this.le.Text = "Sucus";
-<<<<<<< HEAD
             this.le.UseVisualStyleBackColor = false;
             this.le.Click += new System.EventHandler(this.le_Click);
-=======
+
             this.le.UseVisualStyleBackColor = true;
             this.le.Visible = false;
->>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
             // 
             // jobbra
             // 
@@ -108,11 +100,8 @@ namespace _2048
             this.jobbra.TabIndex = 28;
             this.jobbra.Text = "Ius";
             this.jobbra.UseVisualStyleBackColor = false;
-<<<<<<< HEAD
             this.jobbra.Click += new System.EventHandler(this.jobbra_Click);
-=======
             this.jobbra.Visible = false;
->>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
             // 
             // wasd
             // 

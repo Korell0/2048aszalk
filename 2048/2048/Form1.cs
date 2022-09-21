@@ -23,27 +23,39 @@ namespace _2048
             
             
         }
-
-<<<<<<< HEAD
         private void fel_Click(object sender, EventArgs e)
         {
-            Board.MoveVertical(0, Board.tabla.GetLength(1) + 1);
+            Board.FuggolegesMozgas(0, Board.tabla.GetLength(1));
+            EventClick();
         }
 
         private void balra_Click(object sender, EventArgs e)
         {
-            Board.MoveHorizontal(0, Board.tabla.GetLength(0) + 1);
+            Board.VizszintesMozgas(0, Board.tabla.GetLength(0));
+            EventClick();
+
         }
 
         private void jobbra_Click(object sender, EventArgs e)
         {
-            Board.MoveHorizontal(Board.tabla.GetLength(0), -1);
+            Board.VizszintesMozgas(Board.tabla.GetLength(0), 0);
+            EventClick();
+
         }
 
         private void le_Click(object sender, EventArgs e)
         {
-            Board.MoveVertical(Board.tabla.GetLength(1), -1);
-=======
+            Board.FuggolegesMozgas(Board.tabla.GetLength(1), 0);
+            EventClick();
+        }
+
+        private void EventClick()
+        {
+            TablaKiiratas();
+            pont.Text = $"{Board.pontszam}";
+            progressBar.Value = Convert.ToInt32(Math.Log2(Board.MaxPont() / 2) * 10);
+            Board.Del2048();
+        }
         private void Palyageneralas()
         {
             Board = new Grid(meret);
@@ -75,12 +87,6 @@ namespace _2048
         }
 
 
-        private void fel_Click(object sender, EventArgs e)
-        {
-            
-            TablaKiiratas();
-        }
-
         
         private void TablaKiiratas()
         {
@@ -93,7 +99,6 @@ namespace _2048
 
                 }
             }
->>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
         }
 
         private void X5_Click(object sender, EventArgs e)

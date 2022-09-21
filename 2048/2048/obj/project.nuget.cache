@@ -1,7 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "t2hTG2AX1ZZ2l1kVC1EXtGqo9yKVAcKtnGpeVDxYIRYX8xb/my3iywb9seUttXgbLV3s3c5PEXUytzhCW8oZfA==",
+  "dgSpecHash": "ds8z7nmaJLXjKL8IaqfTXXBCb9+niG0ME1KVP0ZeAM1SOeUZWC18SQyqjXueLaGrwOz+E1Wzm6mszyRdVQ3CHQ==",
   "success": true,
   "projectFilePath": "D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\2048.csproj",
   "expectedPackageFiles": [],
@@ -13,11 +12,4 @@
       "message": "Problem reading the cache file D:\\xampp\\htdocs\\2022-2023_2-14SZFT\\Aszmo\\2048\\2048\\2048\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
-=======
-  "dgSpecHash": "Yl9r5TCACz3r1avPIXKf3APmsFx8X+9TlFFT8D4qYvzj8hVf3S42dKgbHuldtmQVgPl0VbTylImYODn53baf8Q==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\korsosadam\\Source\\Repos\\2048aszalk\\2048\\2048\\2048.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
->>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
 }

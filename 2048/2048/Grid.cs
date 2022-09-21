@@ -9,39 +9,96 @@ namespace _2048
     class Grid
     {
         public int[,] tabla;
-        public bool teljes;
-
+        public int pontszam;
         public Grid(int meret)
         {
 
             tabla = new int[meret, meret];
-            teljes = false;
+            pontszam = 0;
             TablaFeltoltes();
             SzamGeneralas(new Random());
-            SzamGeneralas(new Random());
+
+
+            tabla[tabla.GetLength(0) - 2, tabla.GetLength(1) - 1] = 1024;
+            tabla[tabla.GetLength(0) - 2, tabla.GetLength(1) - 2] = 1024;
+
 
         }
 
+
+
+        public void Del2048()
+        {
+
+            for (int sor = 0; sor < tabla.GetLength(1); sor++)
+            {
+                for (int oszlop = 0; oszlop < tabla.GetLength(0); oszlop++)
+                {
+                    if (tabla[sor, oszlop] == 2048)
+                    {
+                        tabla[sor, oszlop] = 0;
+                    }
+                }
+            }
+
+        }
+
+        public int MaxPont()
+        {
+            int max = 0;
+            for (int sor = 0; sor < tabla.GetLength(1); sor++)
+            {
+                for (int oszlop = 0; oszlop < tabla.GetLength(0); oszlop++)
+                {
+                    if (max <= tabla[sor, oszlop])
+                    {
+                        max = tabla[sor, oszlop];
+                    }
+                }
+            }
+            return max;
+        }
+
+        public bool EllenorzesVereseg()
+        {
+            for (int sor = 0; sor < tabla.GetLength(1); sor++)
+            {
+                for (int oszlop = 0; oszlop < tabla.GetLength(0); oszlop++)
+                {
+                    if (tabla[sor, oszlop] == 0)
+                    {
+
+                        // itt kell történjenek a vereség eseményei
+                        return false;
+
+                    }
+                }
+            }
+            return true;
+        }
+
+        public void EllenorzesPont(int sor, int oszlop)
+        {
+            if (tabla[sor, oszlop] == 2048)
+            {
+                pontszam++;
+            }
+        }
+
+         
         public void SzamGeneralas(Random rand)
         {
-            int[] poz = new int[] { rand.Next(0, tabla.GetLength(0)), rand.Next(0, tabla.GetLength(1)) };
-            for (int sor = 0; sor < tabla.GetLength(1); sor++)
-			{
-                for (int oszlop = 0; oszlop < tabla.GetLength(0); oszlop++)
-			    {
-                    if ()
-	                {
-
-	                }
-			    }
-			}
-            if (tabla[poz[0], poz[1]] == 0)
+            if (!EllenorzesVereseg())
             {
-                tabla[poz[0], poz[1]] = rand.Next(1, 3) * 2;
-            }
-            else
-            {
-                SzamGeneralas(rand);
+                int[] poz = new int[] { rand.Next(0, tabla.GetLength(0)), rand.Next(0, tabla.GetLength(1)) };
+                if (tabla[poz[0], poz[1]] == 0)
+                {
+                    tabla[poz[0], poz[1]] = rand.Next(1, 3) * 2;
+                }
+                else
+                {
+                    SzamGeneralas(rand);
+                }
             }
         }
 
@@ -72,6 +129,7 @@ namespace _2048
                             {
                                 tabla[sor, oszlop] *=2;
                                 tabla[sor, i] = 0;
+                                EllenorzesPont(sor, oszlop);
                                 break;
                             }
                             else if (tabla[sor, i] > 0 && oszlop != i)
@@ -85,11 +143,11 @@ namespace _2048
             }
             VizszintesRendezes(honnan, hova, leptek);
             SzamGeneralas(new Random());
-            SzamGeneralas(new Random());
+            MaxPont();
 
         }
 
-        private void VizszintesRendezes(int honnan, int hova, int leptek)
+        public void VizszintesRendezes(int honnan, int hova, int leptek)
         {
             for (int sor = 0; sor < tabla.GetLength(1); sor++)
             {
@@ -127,6 +185,7 @@ namespace _2048
                             {
                                 tabla[sor, oszlop] *= 2;
                                 tabla[i, oszlop] = 0;
+                                EllenorzesPont(sor, oszlop);
                                 break;
                             }
                             else if (tabla[i, oszlop] > 0 && sor != i)
@@ -139,12 +198,11 @@ namespace _2048
             }
             FuggolegesRendezes(honnan, hova, leptek);
             SzamGeneralas(new Random());
-            SzamGeneralas(new Random());
-
+            MaxPont();
 
         }
 
-        private void FuggolegesRendezes(int honnan, int hova, int leptek)
+        public void FuggolegesRendezes(int honnan, int hova, int leptek)
         {
             for (int oszlop = 0; oszlop < tabla.GetLength(0); oszlop++)
             {
