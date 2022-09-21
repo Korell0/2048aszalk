@@ -33,49 +33,64 @@ namespace _2048
             tabla[poz1[0], poz1[1]] = rand.Next(1, 3) * 2;
             tabla[poz2[0], poz2[1]] = rand.Next(1, 3) * 2;
 
-<<<<<<< HEAD
              
-
-        }
-=======
             Console.WriteLine(tabla);
->>>>>>> 5e7915a901438a4015ca4bdc8bd30ee6cd65f1e5
-
-        public void Move(int sor_honnan, int sor_hova, int oszlop_honnan, int oszlop_hova)
-        {
-            //balra gomb összadaás kizárólag (hiányzik az áthelyezés)
-            for (int sor = 0; sor < 6; sor++)
-            {
-                for (int oszlop = 0; oszlop < 6; oszlop++)
-                {
-                    for (int i = 0; i < 6; i++)
-                    {
-                        if (tabla[sor, oszlop] == tabla[sor, i])
-                        {
-                            tabla[sor, oszlop] *= 2;
-                            tabla[sor, i] = 0;
-                        }
-                    }
-                }
-            }
-
-            //jobbra gomb összeadás kizárólag (hiányzik az áthelyezés)
-            for (int sor = 0; sor < 6; sor++)
-            {
-                for (int oszlop = 5; oszlop < -1; oszlop--)
-                {
-                    for (int i = 5; i < -1; i--)
-                    {
-                        if (tabla[sor, oszlop] == tabla[sor, i])
-                        {
-                            tabla[sor, oszlop] *= 2;
-                            tabla[sor, i] = 0;
-                        }
-                    }
-                }
-            }
-            
         }
+
+        public void MoveHorizontal(int honnan, int hova)
+        {
+            //balra és jobbra gomb, összadaás kizárólag (hiányzik az áthelyezés)
+            int leptek = new int[] { honnan, hova }.Max() == hova ? 1 : -1;
+
+            for (int sor = honnan; leptek > 0 ? sor < hova : sor > -1; sor+=leptek)
+            {
+                for (int oszlop = honnan; leptek > 0 ? oszlop < hova : oszlop > -1; oszlop += leptek)
+                {
+                    for (int i = oszlop; leptek > 0 ? i < hova : i > -1; i += leptek)
+                    {
+                        if (tabla[sor, oszlop] == tabla[sor, i])
+                        {
+                            tabla[sor, oszlop] *= 2;
+                            tabla[sor, i] = 0;
+                            break;
+                        }
+                        if (tabla[sor, oszlop] != tabla[sor, i] && tabla[sor, i] != 0)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        public void MoveVertical(int honnan, int hova)
+        {
+            //fel és le gomb összeadás kizárólag (hiányzik az áthelyezés)
+            int leptek = new int[] { honnan, hova }.Max() == hova ? 1 : -1;
+
+            for (int oszlop = honnan; leptek > 0 ? oszlop < hova : oszlop > -1; oszlop+=leptek)
+            {
+                for (int sor = honnan; leptek > 0 ? sor < hova : sor > -1; sor+=leptek)
+                {
+                    for (int i = sor; leptek > 0 ? i < hova : i > -1 ; i+=leptek)
+                    {
+                        if (tabla[sor, oszlop] == tabla[i, oszlop])
+                        {
+                            tabla[sor, oszlop] *= 2;
+                            tabla[i, oszlop] = 0;
+                            break;
+                        }
+                        if (tabla[sor, oszlop] != tabla[i, oszlop] && tabla[i, oszlop] != 0)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
 
         public void Display() 
         {

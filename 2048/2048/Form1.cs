@@ -19,20 +19,24 @@ namespace _2048
             InitializeComponent();
         }
 
-<<<<<<< HEAD
         private void fel_Click(object sender, EventArgs e)
         {
-
-=======
-        private void fel_kattint(object sender, EventArgs e)
-        {
-            
->>>>>>> d93bfc5ce42942bb812c10190db9484c2b32edfa
+            Board.MoveVertical(0, Board.tabla.GetLength(1) + 1);
         }
 
         private void balra_Click(object sender, EventArgs e)
         {
-            
+            Board.MoveHorizontal(0, Board.tabla.GetLength(0) + 1);
+        }
+
+        private void jobbra_Click(object sender, EventArgs e)
+        {
+            Board.MoveHorizontal(Board.tabla.GetLength(0), -1);
+        }
+
+        private void le_Click(object sender, EventArgs e)
+        {
+            Board.MoveVertical(Board.tabla.GetLength(1), -1);
         }
     }
 }
