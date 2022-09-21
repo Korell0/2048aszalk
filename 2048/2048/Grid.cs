@@ -12,99 +12,149 @@ namespace _2048
 
         public Grid(int meret)
         {
+
             tabla = new int[meret, meret];
-            for (int sor = 0; sor < meret; sor++)
+            TablaFeltoltes();
+            SzamGeneralas(new Random());
+            SzamGeneralas(new Random());
+
+        }
+
+        public void SzamGeneralas(Random rand)
+        {
+            int[] poz = new int[] { rand.Next(0, tabla.GetLength(0)), rand.Next(0, tabla.GetLength(1)) };
+            if (tabla[poz[0], poz[1]] == 0)
             {
-                for (int oszlop = 0; oszlop < meret; oszlop++)
+                tabla[poz[0], poz[1]] = rand.Next(1, 3) * 2;
+            }
+            else
+            {
+                SzamGeneralas(rand);
+            }
+        }
+
+        public void TablaFeltoltes()
+        {
+            for (int sor = 0; sor < tabla.GetLength(0); sor++)
+            {
+                for (int oszlop = 0; oszlop < tabla.GetLength(1); oszlop++)
                 {
                     tabla[sor, oszlop] = 0;
                 }
             }
-
-            Random rand = new Random();
-
-            int[] poz1 = new int[] { rand.Next(0, meret) , rand.Next(0, meret) };
-            int[] poz2 = new int[] { poz1[0], poz1[1] };
-            while (poz1[0] == poz2[0] && poz1[1] == poz2[1])
-            {
-                poz2 = new int[] {rand.Next(0, meret) , rand.Next(0, meret) };
-            }
-
-            tabla[poz1[0], poz1[1]] = rand.Next(1, 3) * 2;
-            tabla[poz2[0], poz2[1]] = rand.Next(1, 3) * 2;
-
-             
-<<<<<<< HEAD
-            Console.WriteLine(tabla);
         }
 
-        public void MoveHorizontal(int honnan, int hova)
-=======
 
-            Console.WriteLine(tabla);
-        }
-        
-        public void Move(int sor_honnan, int sor_hova, int oszlop_honnan, int oszlop_hova)
->>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
+        public void VizszintesMozgas(int honnan, int hova)
         {
-            //balra és jobbra gomb, összadaás kizárólag (hiányzik az áthelyezés)
-            int leptek = new int[] { honnan, hova }.Max() == hova ? 1 : -1;
-
-            for (int sor = honnan; leptek > 0 ? sor < hova : sor > -1; sor+=leptek)
+            int leptek = honnan < hova ? 1 : -1;
+            for (int sor = 0; sor < tabla.GetLength(1); sor++)
             {
-                for (int oszlop = honnan; leptek > 0 ? oszlop < hova : oszlop > -1; oszlop += leptek)
+                for (int oszlop = honnan < hova ? 0 : honnan - 1; honnan < hova ? oszlop < hova : oszlop > hova - 1; oszlop+=leptek)
                 {
-                    for (int i = oszlop; leptek > 0 ? i < hova : i > -1; i += leptek)
+                    if (tabla[sor, oszlop] > 0)
                     {
-                        if (tabla[sor, oszlop] == tabla[sor, i])
+                        for (int i = oszlop; honnan < hova ? i < hova : i > hova - 1; i += leptek)
                         {
-                            tabla[sor, oszlop] *= 2;
-                            tabla[sor, i] = 0;
-                            break;
+                            if (tabla[sor, oszlop] == tabla[sor, i] && oszlop != i)
+                            {
+                                tabla[sor, oszlop] *=2;
+                                tabla[sor, i] = 0;
+                                break;
+                            }
+                            else if (tabla[sor, i] > 0 && oszlop != i)
+                            {
+                                break;
+                            }
                         }
-                        if (tabla[sor, oszlop] != tabla[sor, i] && tabla[sor, i] != 0)
+                    }
+                    
+                }
+            }
+            VizszintesRendezes(honnan, hova, leptek);
+            SzamGeneralas(new Random());
+            SzamGeneralas(new Random());
+
+        }
+
+        private void VizszintesRendezes(int honnan, int hova, int leptek)
+        {
+            for (int sor = 0; sor < tabla.GetLength(1); sor++)
+            {
+                for (int oszlop = honnan < hova ? 0 : honnan - 1; honnan < hova ? oszlop < hova : oszlop > hova - 1; oszlop += leptek)
+                {
+                    if (tabla[sor, oszlop] == 0)
+                    {
+                        for (int i = oszlop; honnan < hova ? i < hova : i > hova - 1; i += leptek)
                         {
-                            break;
+                            if (tabla[sor, i] > 0)
+                            {
+                                tabla[sor, oszlop] = tabla[sor, i];
+                                tabla[sor, i] = 0;
+                                break;
+                            }
                         }
                     }
                 }
             }
         }
 
-        public void MoveVertical(int honnan, int hova)
-        {
-            //fel és le gomb összeadás kizárólag (hiányzik az áthelyezés)
-            int leptek = new int[] { honnan, hova }.Max() == hova ? 1 : -1;
 
-            for (int oszlop = honnan; leptek > 0 ? oszlop < hova : oszlop > -1; oszlop+=leptek)
+        public void FuggolegesMozgas(int honnan, int hova)
+        {
+            int leptek = honnan < hova ? 1 : -1;
+            for (int oszlop = 0; oszlop < tabla.GetLength(0); oszlop++)
             {
-                for (int sor = honnan; leptek > 0 ? sor < hova : sor > -1; sor+=leptek)
+                for (int sor = honnan < hova ? 0 : honnan - 1; honnan < hova ? sor < hova : sor > hova - 1; sor+=leptek)
                 {
-                    for (int i = sor; leptek > 0 ? i < hova : i > -1 ; i+=leptek)
+                    if (tabla[sor, oszlop] > 0)
                     {
-                        if (tabla[sor, oszlop] == tabla[i, oszlop])
+                        for (int i = sor; honnan < hova ? i < hova : i > hova - 1; i+=leptek)
                         {
-                            tabla[sor, oszlop] *= 2;
-                            tabla[i, oszlop] = 0;
-                            break;
+                            if (tabla[sor, oszlop] == tabla[i, oszlop] && sor != i)
+                            {
+                                tabla[sor, oszlop] *= 2;
+                                tabla[i, oszlop] = 0;
+                                break;
+                            }
+                            else if (tabla[i, oszlop] > 0 && sor != i)
+                            {
+                                break;
+                            }
                         }
-                        if (tabla[sor, oszlop] != tabla[i, oszlop] && tabla[i, oszlop] != 0)
+                    }
+                }
+            }
+            FuggolegesRendezes(honnan, hova, leptek);
+            SzamGeneralas(new Random());
+            SzamGeneralas(new Random());
+
+
+        }
+
+        private void FuggolegesRendezes(int honnan, int hova, int leptek)
+        {
+            for (int oszlop = 0; oszlop < tabla.GetLength(0); oszlop++)
+            {
+                for (int sor = honnan < hova ? 0 : honnan - 1; honnan < hova ? sor < hova : sor > hova - 1; sor += leptek)
+                {
+                    if (tabla[sor, oszlop] == 0)
+                    {
+                        for (int i = sor; honnan < hova ? i < hova : i > hova - 1; i += leptek)
                         {
-                            break;
+                            if (tabla[i, oszlop] > 0)
+                            {
+                                tabla[sor, oszlop] = tabla[i, oszlop];
+                                tabla[i, oszlop] = 0;
+                                break;
+                            }
                         }
                     }
                 }
             }
         }
 
-<<<<<<< HEAD
-
-
-
-        public void Display() 
-=======
         public int Display(int sor,int oszlop) 
->>>>>>> dc5a6d69655839b8e3021e8134d83c73c09fcbf8
         {
             int collum = tabla.GetLength(0);
             int row = tabla.GetLength(1);
