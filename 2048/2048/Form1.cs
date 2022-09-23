@@ -18,7 +18,9 @@ namespace _2048
         public Form1()
         {
             InitializeComponent();
+
         }
+
 
 
 

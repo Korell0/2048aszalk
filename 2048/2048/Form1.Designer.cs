@@ -150,13 +150,13 @@ namespace _2048
             // 
             // pont
             // 
-            this.pont.AutoSize = true;
             this.pont.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pont.Location = new System.Drawing.Point(533, 85);
+            this.pont.Location = new System.Drawing.Point(480, 85);
             this.pont.Name = "pont";
-            this.pont.Size = new System.Drawing.Size(32, 37);
+            this.pont.Size = new System.Drawing.Size(144, 44);
             this.pont.TabIndex = 58;
             this.pont.Text = "0";
+            this.pont.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.pont.Visible = false;
             // 
             // size
@@ -227,6 +227,7 @@ namespace _2048
             this.Controls.Add(this.fel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "2048";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

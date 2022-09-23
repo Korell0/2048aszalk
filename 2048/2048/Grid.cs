@@ -15,7 +15,7 @@ namespace _2048
         {
 
             tabla = new int[meret, meret];
-            pontszam = 0;
+            pontszam = 256;
             TablaFeltoltes();
             SzamGeneralas(new Random());
             SzamGeneralas(new Random());
@@ -56,39 +56,11 @@ namespace _2048
             return max;
         }
 
-        public bool EllenorzesVereseg()
-        {
-            for (int sor = 0; sor < tabla.GetLength(1); sor++)
-            {
-                for (int oszlop = 0; oszlop < tabla.GetLength(0); oszlop++)
-                {
-                    if (tabla[sor, oszlop] == 0)
-                    {
-
-                        // itt kell történjenek a vereség eseményei
-                        return false;
-
-                    }
-                }
-            }
-            MessageBox.Show($"Játék Vége!\nElért pontszámod: {pontszam}");
-            Application.Restart();
-            return true; // Ez itt egy picit érdekes 🤔
-        }
-
-        public void EllenorzesPont(int sor, int oszlop)
-        {
-            if (tabla[sor, oszlop] == 2048)
-            {
-                pontszam++;
-            }
-        }
 
          
         public void SzamGeneralas(Random rand)
         {
-            if (!EllenorzesVereseg())
-            {
+
                 int[] poz = new int[] { rand.Next(0, tabla.GetLength(0)), rand.Next(0, tabla.GetLength(1)) };
                 if (tabla[poz[0], poz[1]] == 0)
                 {
@@ -98,7 +70,7 @@ namespace _2048
                 {
                     SzamGeneralas(rand);
                 }
-            }
+           
         }
 
         public void TablaFeltoltes()
@@ -115,6 +87,7 @@ namespace _2048
 
         public void VizszintesMozgas(int honnan, int hova)
         {
+            bool mozgott = false;
             int leptek = honnan < hova ? 1 : -1;
             for (int sor = 0; sor < tabla.GetLength(1); sor++)
             {
@@ -128,7 +101,8 @@ namespace _2048
                             {
                                 tabla[sor, oszlop] *=2;
                                 tabla[sor, i] = 0;
-                                EllenorzesPont(sor, oszlop);
+                                pontszam += tabla[sor, oszlop];
+                                mozgott = true;
                                 break;
                             }
                             else if (tabla[sor, i] > 0 && oszlop != i)
@@ -140,13 +114,10 @@ namespace _2048
                     
                 }
             }
-            VizszintesRendezes(honnan, hova, leptek);
-            SzamGeneralas(new Random());
-            MaxPont();
-
+            VizszintesRendezes(honnan, hova, leptek, mozgott);
         }
 
-        public void VizszintesRendezes(int honnan, int hova, int leptek)
+        public void VizszintesRendezes(int honnan, int hova, int leptek, bool mozgott)
         {
             for (int sor = 0; sor < tabla.GetLength(1); sor++)
             {
@@ -160,17 +131,27 @@ namespace _2048
                             {
                                 tabla[sor, oszlop] = tabla[sor, i];
                                 tabla[sor, i] = 0;
+                                mozgott = true;
                                 break;
                             }
                         }
                     }
                 }
             }
+            if (mozgott)
+            {
+                SzamGeneralas(new Random());
+            }
+            else if (!MozgasEllenorzes())
+            {
+                //vereség
+            }
         }
 
 
         public void FuggolegesMozgas(int honnan, int hova)
         {
+            bool mozgott = false;
             int leptek = honnan < hova ? 1 : -1;
             for (int oszlop = 0; oszlop < tabla.GetLength(0); oszlop++)
             {
@@ -184,7 +165,8 @@ namespace _2048
                             {
                                 tabla[sor, oszlop] *= 2;
                                 tabla[i, oszlop] = 0;
-                                EllenorzesPont(sor, oszlop);
+                                pontszam += tabla[sor, oszlop];
+                                mozgott = true;
                                 break;
                             }
                             else if (tabla[i, oszlop] > 0 && sor != i)
@@ -195,13 +177,10 @@ namespace _2048
                     }
                 }
             }
-            FuggolegesRendezes(honnan, hova, leptek);
-            SzamGeneralas(new Random());
-            MaxPont();
-
+            FuggolegesRendezes(honnan, hova, leptek, mozgott);
         }
 
-        public void FuggolegesRendezes(int honnan, int hova, int leptek)
+        public void FuggolegesRendezes(int honnan, int hova, int leptek, bool mozgott)
         {
             for (int oszlop = 0; oszlop < tabla.GetLength(0); oszlop++)
             {
@@ -215,12 +194,63 @@ namespace _2048
                             {
                                 tabla[sor, oszlop] = tabla[i, oszlop];
                                 tabla[i, oszlop] = 0;
+                                mozgott = true;
                                 break;
                             }
                         }
                     }
                 }
             }
+            if (mozgott)
+            {
+                SzamGeneralas(new Random());
+            }
+            else if (!MozgasEllenorzes())
+            {
+                MessageBox.Show($"Játék Vége!\nElért pontszámod: {pontszam}");
+                //vereség
+            }
         }
+
+
+        private bool MozgasEllenorzes()
+        {
+            for (int sor = 0; sor < tabla.GetLength(0); sor++)
+            {
+                for (int oszlop = 0; oszlop < tabla.GetLength(1); oszlop++)
+                {
+                    if (sor -1  >= 0)
+                    {
+                        if (tabla[sor-1, oszlop] == tabla[sor, oszlop])
+                        {
+                            return true;
+                        }
+                    }
+                    if (sor +1 < tabla.GetLength(0))
+                    {
+                        if (tabla[sor + 1, oszlop] == tabla[sor, oszlop])
+                        {
+                            return true;
+                        }
+                    }
+                    if (oszlop -1 >= 0)
+                    {
+                        if (tabla[sor, oszlop-1] == tabla[sor, oszlop])
+                        {
+                            return true;
+                        }
+                    }
+                    if (oszlop + 1 < tabla.GetLength(1))
+                    {
+                        if (tabla[sor, oszlop+1] == tabla[sor, oszlop])
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
     }
 }
