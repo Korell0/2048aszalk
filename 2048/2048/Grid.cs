@@ -15,14 +15,12 @@ namespace _2048
         {
 
             tabla = new int[meret, meret];
-            pontszam = 256;
+            pontszam = 0;
             TablaFeltoltes();
             SzamGeneralas(new Random());
             SzamGeneralas(new Random());
 
         }
-
-
 
         public void Del2048()
         {
@@ -37,7 +35,6 @@ namespace _2048
                     }
                 }
             }
-
         }
 
         public int MaxPont()
@@ -56,20 +53,17 @@ namespace _2048
             return max;
         }
 
-
-         
         public void SzamGeneralas(Random rand)
         {
-
-                int[] poz = new int[] { rand.Next(0, tabla.GetLength(0)), rand.Next(0, tabla.GetLength(1)) };
-                if (tabla[poz[0], poz[1]] == 0)
-                {
-                    tabla[poz[0], poz[1]] = rand.Next(1, 3) * 2;
-                }
-                else
-                {
-                    SzamGeneralas(rand);
-                }
+            int[] poz = new int[] { rand.Next(0, tabla.GetLength(0)), rand.Next(0, tabla.GetLength(1)) };
+            if (tabla[poz[0], poz[1]] == 0)
+            {
+                tabla[poz[0], poz[1]] = rand.Next(1, 3) * 2;
+            }
+            else
+            {
+                SzamGeneralas(rand);
+            }
            
         }
 
@@ -138,16 +132,8 @@ namespace _2048
                     }
                 }
             }
-            if (mozgott)
-            {
-                SzamGeneralas(new Random());
-            }
-            else if (!MozgasEllenorzes())
-            {
-                //vereség
-            }
+            Ellenoriz(mozgott);
         }
-
 
         public void FuggolegesMozgas(int honnan, int hova)
         {
@@ -201,19 +187,24 @@ namespace _2048
                     }
                 }
             }
+            Ellenoriz(mozgott);
+        }
+
+
+        private void Ellenoriz(bool mozgott)
+        {
             if (mozgott)
             {
                 SzamGeneralas(new Random());
             }
-            else if (!MozgasEllenorzes())
+            else if (!MozgasLehetoseg())
             {
                 MessageBox.Show($"Játék Vége!\nElért pontszámod: {pontszam}");
                 //vereség
             }
-        }
+        } 
 
-
-        private bool MozgasEllenorzes()
+        private bool MozgasLehetoseg()
         {
             for (int sor = 0; sor < tabla.GetLength(0); sor++)
             {
@@ -247,10 +238,13 @@ namespace _2048
                             return true;
                         }
                     }
+                    if (tabla[sor, oszlop] == 0)
+                    {
+                        return true;
+                    }
                 }
             }
             return false;
         }
-
     }
 }
